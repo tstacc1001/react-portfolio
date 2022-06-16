@@ -1,7 +1,7 @@
-// import React from 'react';
-import logo from '../logo.svg';
+import React from 'react';
 import '../App.css';
-// import React from 'react';
+import {Link, animateScroll as scroll} from 'react-scroll';
+
 export default function Header() {
 
     function navigateTo(event){
@@ -11,17 +11,16 @@ export default function Header() {
   return (
       <header className='header-wrapper'>
           <div className='header'>
-            <div className='logo-wrapper'>
-                <p>DAVID<span>YOON</span></p>
+            <div className='logo-wrapper' >
+                <p onClick={()=> scroll.scrollToTop()}>DAVID<span>Y.</span></p>
             </div>
             <div>
                 <ul>
-                    <li onClick={navigateTo} className='navigator'>ABOUT</li>
-                    <li onClick={navigateTo} className='navigator'>WORK</li>
-                    <li onClick={navigateTo} className='navigator'>CONTACT</li>
+                    <Link className='link' to='about' smooth={true} duration={500} ignoreCancelEvents={true}>ABOUT</Link>
+                    <Link className='link' to='work' smooth={true} duration={500} ignoreCancelEvents={true}>WORK</Link>
+                    <Link className='link' to='contact' smooth={true} duration={500} ignoreCancelEvents={true}>CONTACT</Link>
                 </ul>
             </div>
-
           </div>
       </header>
   );

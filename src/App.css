@@ -8,6 +8,9 @@ body {
   position: relative;
 }
 
+/* Header ********************************************/
+/* Header ********************************************/
+/* Header ********************************************/
 
 .header-wrapper{
   opacity: .8;
@@ -18,18 +21,24 @@ body {
 }
 
 .header-wrapper .header{
+  background-color: #0D0D0D;
   display: flex;
   flex-direction: row;
-  padding: 1.5rem 10rem;
-  font-size: 20px;
+  align-items: center;
+  padding: 1rem 10rem;
+  font-size: 16px;
   justify-content: space-between;
   box-sizing: border-box;
+  color: white;
 }
-.logo-wrapper{
+.logo-wrapper p{
+  cursor: pointer;
+  letter-spacing: 3px;
+  font-size: 20px;
   color: white;
 }
 .logo-wrapper span{
-  color: #9b9b9b;
+  color: #c5c5c5;
 }
 
 .header-wrapper ul{
@@ -37,23 +46,45 @@ body {
   flex-direction: row;
   gap: 1rem;
 }
+.header-wrapper .link {
+  letter-spacing: 3px;
+  cursor: pointer;
+  color: white;
+}
 
 
 
 
 
 
+/* carousel navigation **********************************/
+/* carousel navigation **********************************/
+/* carousel navigation **********************************/
+.carousel-nav{
+  position: fixed;
+  top: 45%;
+  left: 3rem;
+  z-index: 1;
+}
+.carousel-nav ul{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.carousel-nav .navigator{
+  cursor: pointer;
+  width: .5rem;
+  height: .5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
 
 
+/* carousel *****************************************/
+/* carousel *****************************************/
+/* carousel *****************************************/
 
-
-
-
-
-
-
-
-.well {
+.carousel {
   position: relative;
   overflow: hidden;
   transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -62,33 +93,61 @@ body {
 .panel {
   position: relative;
   height: 100vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   font-size: 10vmin;
-  padding: 3em;
+  padding: 5rem 10rem;
   box-sizing: border-box;
-  color: hsla(0, 0%, 100%, .1);
+  color: rgb(255, 255, 255);
   cursor: default;
 }
-
-.panel:nth-child(1) {
-  background: #012345;
+.panel h1{
+  letter-spacing: 3px;
+  font-weight: 900;
 }
 
-.panel:nth-child(2) {
-  background: #123456;
+.panel:nth-child(1){
+  background-color: #0D0D0D;
+}
+.panel:nth-child(2){
+  background-color: rgb(250, 250, 250);
+}
+.panel:nth-child(3){
+  background-color: #404040;
+}
+.panel:nth-child(4){
+  background-color: #3D4034;
 }
 
-.panel:nth-child(3) {
-  background: #234567;
+
+/* Domain **********************************************/
+/* Domain **********************************************/
+/* Domain **********************************************/
+.domain{
+  text-align: left;
+}
+.domain .test{
+  transition: transform .5s ease-out;
+  transform-origin: top;
+  transform: rotateX(100deg);
+}
+.domain .test:hover{
+  transform: rotateX(0deg);
 }
 
-.panel:nth-child(4) {
-  background: #345678;
+
+/* About *********************************************/
+/* About *********************************************/
+/* About *********************************************/
+.about h1{
+  color: #0D0D0D;
 }
 
-.panel:nth-child(5) {
-  background: #456789;
-}
+
+/* App default css *************************************/
+/* App default css *************************************/
+/* App default css *************************************/
 .App {
   text-align: center;
 }
