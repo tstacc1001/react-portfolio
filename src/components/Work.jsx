@@ -5,7 +5,7 @@ export default function Work() {
 
   return (
     <div className="panel" id='work'>
-        <label>Work</label>
+        <h1>WORK</h1>
     </div>
   );
 }

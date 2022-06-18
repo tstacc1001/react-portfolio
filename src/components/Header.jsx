@@ -12,7 +12,8 @@ export default function Header() {
       <header className='header-wrapper'>
           <div className='header'>
             <div className='logo-wrapper' >
-                <p onClick={()=> scroll.scrollToTop()}>DAVID<span>Y.</span></p>
+            <Link className='navigator' to='domain' smooth={true} duration={500} ignoreCancelEvents={true}><p>DAVID<span>Y.</span></p></Link>
+                
             </div>
             <div>
                 <ul>

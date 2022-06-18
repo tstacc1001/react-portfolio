@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1em 10em;
   font-size: 16px;
   justify-content: space-between;
   box-sizing: border-box;
@@ -38,7 +38,7 @@ body {
   color: white;
 }
 .logo-wrapper span{
-  color: #c5c5c5;
+  color: rgb(100, 100, 100);
 }
 
 .header-wrapper ul{
@@ -47,9 +47,13 @@ body {
   gap: 1rem;
 }
 .header-wrapper .link {
+  transition: .3s;
   letter-spacing: 3px;
   cursor: pointer;
   color: white;
+}
+.header-wrapper .link:hover{
+  color: rgb(160, 67, 236);
 }
 
 
@@ -72,11 +76,15 @@ body {
   gap: .5rem;
 }
 .carousel-nav .navigator{
+  transition: .3s;
   cursor: pointer;
   width: .5rem;
   height: .5rem;
-  border: 2px solid white;
+  border: 2px solid rgb(160, 67, 236);
   border-radius: 50%;
+}
+.carousel-nav .navigator:hover{
+  background-color: rgb(160, 67, 236);
 }
 
 
@@ -102,9 +110,12 @@ body {
   color: rgb(255, 255, 255);
   cursor: default;
 }
+.panel:nth-child(5){
+  height: 50vh;
+}
 .panel h1{
-  letter-spacing: 3px;
-  font-weight: 900;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .panel:nth-child(1){
@@ -114,37 +125,194 @@ body {
   background-color: rgb(250, 250, 250);
 }
 .panel:nth-child(3){
-  background-color: #404040;
+  background-color: #0D0D0D;
 }
 .panel:nth-child(4){
-  background-color: #3D4034;
+  background-color: #0D0D0D;
 }
 
 
 /* Domain **********************************************/
 /* Domain **********************************************/
 /* Domain **********************************************/
-.domain{
-  text-align: left;
+.domain .opening-tag::before{
+  content: '<>';
+  font-style: italic;
+  transform: skewX(-20deg);
+  font-size: 5vmin;
+  position: absolute;
+  top: 3rem;
+  left: 10rem;
+  color: rgb(73, 73, 73);
 }
-.domain .test{
-  transition: transform .5s ease-out;
-  transform-origin: top;
-  transform: rotateX(100deg);
+.domain .closing-tag::after{
+  font-style: italic;
+  transform: skewX(-20deg);
+  content: '< />';
+  color: rgb(73, 73, 73);
+  font-size: 5vmin;
+  position: absolute;
+  bottom: 2rem;
+  left: 10rem;
 }
-.domain .test:hover{
-  transform: rotateX(0deg);
+.title-wrapper{
+  position: relative;
+  line-height: 1.3em;
+}
+.title-wrapper:before{
+  font-style: italic;
+  content: '<h1>';
+  transform: skewX(-20deg);
+  top: -2.5em;
+  position: absolute;
+  font-size: 4vmin;
+  color: rgb(73, 73, 73);
+}
+.title-wrapper:after{
+  content: '</h1>';
+  font-style: italic;
+  transform: skewX(-20deg);
+  bottom: -2.5em;
+  left: 0;
+  position: absolute;
+  font-size: 4vmin;
+  color: rgb(73, 73, 73);
+}
+.domain h1{
+  transition: .5s;
+  /* transform: rotateX(90deg); */
+  letter-spacing: 3px;
+  font-weight: 900;
+  transform-origin: top ;
+}
+.typing-cursor{
+  border-right: .1em solid white;
+  margin-left: .5rem;
+  animation: typing 1s step-start infinite;
+}
+@keyframes typing{
+  50%{
+    opacity: 0;
+  }
 }
 
-
 /* About *********************************************/
 /* About *********************************************/
 /* About *********************************************/
+.about{
+  position: relative;
+  color: #0D0D0D;
+}
+.about-wrapper{
+  margin-left: auto;
+  width: 65%;
+  /* animation: slideIn .8s;   */
+  white-space: pre-line;
+}
+.about-wrapper h3{
+  font-size: 2rem;
+  font-weight: 400;
+}
+.about-wrapper p{
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  font-weight: 200;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  /* animation: secondKick .8s; */
+}
+@keyframes slideIn{
+  0%{
+    opacity: 0;
+    margin-left: 5rem;
+  }
+  50%{
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+@keyframes secondKick{
+  25%{
+    opacity: 0;
+    margin-left: 5rem;
+  }
+  100%{
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
 .about h1{
   color: #0D0D0D;
 }
 
+/* contact **********************************************/
+/* contact **********************************************/
+/* contact **********************************************/
+.contact {
+  position: relative;
+}
+.contact-wrapper{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+.contact-form label{
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.contact-form input{
+  margin-top: .5rem;
+  margin-bottom: 2.5rem;
+  color: white;
+  background-color: rgb(41, 41, 41);
+  padding: .5rem .5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.contact-form input:focus{
+  outline: none;
+}
+.contact-form textarea{
+  margin-top: .5rem;
+  margin-bottom: 2.5rem;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(41, 41, 41);
+  padding: .5rem .5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+.contact-form textarea:focus{
+  color: white;
+  outline: none;
+}
 
+.contact-form button{
+  margin-top: 1rem;
+  width: fit-content;
+  font-size: .8rem;
+    letter-spacing: .1rem;
+    transition: .2s;
+    cursor: pointer;
+    color: white;
+    padding: .6rem 1.7rem;
+    font-weight: 500;
+    box-shadow: 0px 1px 5px rgb(255, 255, 255);
+    border: 1px solid transparent;
+    background: rgb(160, 67, 236);
+}
+.contact-form button:hover{
+    background-color: white;
+    box-shadow: none;
+    color: rgb(160, 67, 236);
+    border: 1px solid rgb(160, 67, 236);
+}
 /* App default css *************************************/
 /* App default css *************************************/
 /* App default css *************************************/
@@ -163,9 +331,9 @@ body {
   }
 }
 
-.App-header {
+.App-footer {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;

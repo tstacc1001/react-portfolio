@@ -12,6 +12,7 @@ export default function CarouselNavbar() {
             <Link className='navigator' to='about' smooth={true} duration={500} ignoreCancelEvents={true}></Link>
             <Link className='navigator 'to='work' smooth={true} duration={500} ignoreCancelEvents={true}></Link>
             <Link className='navigator 'to='contact' smooth={true} duration={500} ignoreCancelEvents={true}></Link>
+            <Link className='navigator 'to='footer' smooth={true} duration={500} ignoreCancelEvents={true}></Link>
         </ul>
       </div>
   );
