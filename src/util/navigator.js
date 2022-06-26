@@ -45,33 +45,17 @@ export default function navigator(){
     let wheeling = false;
     window.addEventListener('wheel', function(event){
         let wheelDir = Math.sign(event.deltaY);
-        console.log(wheelDir);
-        this.clearTimeout(shitfk);
-        function shitfk(){
-            setTimeout(()=>{
-                console.log("shitfuck");
-            }, 1000)
-        }
-        if(wheelDir === 0){
-            console.log("fuck");
-        }
         if (wheelDir < 0 && wheeling === false){
             wheeling = true;
             scrollToSection(parseInt(currSection)+parseInt(wheelDir));
-
-            this.setTimeout(()=>{
-                wheelDir = 0;
-                wheeling = false;
-            }, 1200)
-            console.log(wheelDir);
-            console.log(wheeling);
-
-        }else if (event.deltaY > 0){
-            // console.log(event.deltaY);
+        }else if (event.deltaY > 0 && wheeling === false){
+            wheeling = true;
+            scrollToSection(parseInt(currSection)+parseInt(wheelDir));
         }
-        // console.log(currSection);
+        this.clearTimeout(wheeling);
+        wheeling = setTimeout(()=>{
+            console.log("stop wheeling");
+            wheeling = false;
+        }, 50)
     }); 
-
-    
-
 }
