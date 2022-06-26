@@ -1,5 +1,6 @@
 export default function navigator(){
     const links = document.querySelectorAll("[id^='sectionLink']");
+    const sections = document.querySelectorAll(".panel");
     // current section index
     let currSection = 1;
     // scroll function
@@ -37,7 +38,6 @@ export default function navigator(){
                     curr.classList.remove("link-current", "nav-current")
                 }
             })
-            console.log(currSection);
         }
     })  
 
@@ -45,11 +45,19 @@ export default function navigator(){
     let wheeling = false;
     window.addEventListener('wheel', function(event){
         let wheelDir = Math.sign(event.deltaY);
-        if (wheelDir < 0 && wheeling === false){
+        if(wheelDir < 0 && wheeling === false){
             wheeling = true;
+            if(parseInt(currSection)+parseInt(wheelDir) < 1){
+                scrollToSection(sections.length);    
+            }
             scrollToSection(parseInt(currSection)+parseInt(wheelDir));
-        }else if (event.deltaY > 0 && wheeling === false){
+        }else if(event.deltaY > 0 && wheeling === false){
             wheeling = true;
+            if(parseInt(currSection)+parseInt(wheelDir) > sections.length){
+                console.log("back to top");
+                console.log(sections.length);
+                scrollToSection((parseInt(currSection)+parseInt(wheelDir))- sections.length);    
+            }
             scrollToSection(parseInt(currSection)+parseInt(wheelDir));
         }
         this.clearTimeout(wheeling);
