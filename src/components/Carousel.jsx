@@ -6,7 +6,7 @@ import Work from './Work';
 import Footer from './Footer';
 export default function Carousel() {
   return (
-    <section className="carousel">
+    <section className="carousel" id='content'>
         <Domain />
         <About />
         <Work />

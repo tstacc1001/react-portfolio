@@ -4,7 +4,7 @@ import React from 'react';
 export default function Contact() {
 
   return (
-    <div className="panel" id='contact'>
+    <div className="panel" id='section4'>
       <div className='contact-wrapper'>
         <h1>CONTACT</h1>
 

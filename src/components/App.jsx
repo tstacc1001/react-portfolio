@@ -1,19 +1,18 @@
-import React from 'react';
-
 import '../App.css';
-// import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import Header from './Header';
 import CarouselNavbar from './CarouselNavbar'
 import Carousel from './Carousel'
-import { useEffect } from 'react';
-
+import navigator from '../util/navigator';
 function App() {
+  useEffect(()=>{
+    navigator();
+  }, [])
   return (
       <section className='app'>
         <Header />
-        <CarouselNavbar/>
+        <CarouselNavbar />
         <Carousel />
-        
       </section>
   );
 }

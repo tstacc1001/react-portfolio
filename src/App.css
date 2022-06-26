@@ -47,16 +47,18 @@ body {
   gap: 1rem;
 }
 .header-wrapper .link {
-  transition: .3s;
+  transition: .2s;
   letter-spacing: 3px;
   cursor: pointer;
   color: white;
 }
 .header-wrapper .link:hover{
-  color: rgb(160, 67, 236);
+  color: #61dafb;
 }
 
-
+.header-wrapper .link-current{
+  color: #61dafb;
+}
 
 
 
@@ -76,15 +78,18 @@ body {
   gap: .5rem;
 }
 .carousel-nav .navigator{
-  transition: .3s;
+  transition: .2s;
   cursor: pointer;
   width: .5rem;
   height: .5rem;
-  border: 2px solid rgb(160, 67, 236);
+  border: 2px solid #61dafb;
   border-radius: 50%;
 }
 .carousel-nav .navigator:hover{
-  background-color: rgb(160, 67, 236);
+  background-color: #61dafb;
+}
+.nav-current{
+  background-color: #61dafb;
 }
 
 
@@ -305,13 +310,13 @@ body {
     font-weight: 500;
     box-shadow: 0px 1px 5px rgb(255, 255, 255);
     border: 1px solid transparent;
-    background: rgb(160, 67, 236);
+    background: #61dafb;
 }
 .contact-form button:hover{
     background-color: white;
     box-shadow: none;
-    color: rgb(160, 67, 236);
-    border: 1px solid rgb(160, 67, 236);
+    color: #61dafb;
+    border: 1px solid #61dafb;
 }
 /* App default css *************************************/
 /* App default css *************************************/

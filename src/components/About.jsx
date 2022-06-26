@@ -4,7 +4,7 @@ import React from 'react';
 export default function About() {
 
   return (
-    <div className="panel about" id='about'>
+    <div className="panel about" id='section2'>
       
       <div className='about-wrapper'>
         <h1>ABOUT</h1>

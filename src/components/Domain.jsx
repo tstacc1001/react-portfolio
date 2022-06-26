@@ -6,7 +6,7 @@ export default function Domain() {
     // typeWriter(targetLoc, 100);
   }, [])
   return (
-    <div className="panel domain" id='domain'>
+    <div className="panel domain" id='section1'>
       <p className='opening-tag'></p>
       <div className='title-wrapper'>
         <h1 className='type-writer'>Hello, </h1>
