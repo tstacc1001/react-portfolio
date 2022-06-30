@@ -1,12 +1,11 @@
-export default function typeWriter(target, speed){
-    for(let i=0; i<target.length;){
-        let txt = target[i].innerHTML;
-        for(let j =0 ; j< txt.length; j++){
-            setTimeout(()=>{
-                // target[i].innerHTML += txt.charAt(j);
-            }, j * speed)           
-        }
-
+export default function typeWriter(){
+    let domainText = document.querySelectorAll(".type-writer"); 
+    domainText.forEach(text =>{
+        console.log(text);
+    })
+    for(let i=0; i<domainText.length; i++){
+        setTimeout(()=>{
+            domainText.innerText += domainText.charAt(i);  
+        }, 300)
     }
-
 }

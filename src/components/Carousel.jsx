@@ -11,7 +11,7 @@ export default function Carousel() {
         <About />
         <Work />
         <Contact />
-        <Footer />
+        {/* <Footer /> */}
     </section>
   );
 }

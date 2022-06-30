@@ -3,10 +3,11 @@ import React, {useState, useEffect} from 'react';
 import Header from './Header';
 import CarouselNavbar from './CarouselNavbar'
 import Carousel from './Carousel'
-import navigator from '../util/navigator';
+import scroll from '../util/scroll';
+import typeWriter from '../util/typeWriter';
 function App() {
   useEffect(()=>{
-    navigator();
+    scroll();
   }, [])
   return (
       <section className='app'>
