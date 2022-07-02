@@ -161,8 +161,10 @@ body {
   left: 10rem;
 }
 .title-wrapper{
+  height: 4em;
   position: relative;
   line-height: 1.3em;
+  
 }
 .title-wrapper:before{
   font-style: italic;
@@ -190,7 +192,7 @@ body {
   font-weight: 900;
   transform-origin: top ;
 }
-.typing-cursor{
+.type-writer span{
   border-right: .1em solid white;
   margin-left: .5rem;
   animation: typing 1s step-start infinite;

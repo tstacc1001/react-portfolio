@@ -1,6 +1,7 @@
 export default function scroll(){
     const links = document.querySelectorAll("[id^='sectionLink']");
     const sections = document.querySelectorAll(".panel");
+    
     // current section index
     let currSection = 1;
     // scroll function
@@ -40,25 +41,26 @@ export default function scroll(){
         }
     })  
     // onWheel event
-    let wheeling = false;
+    let wheelActive = false;
     window.addEventListener('wheel', function(event){
         let wheelDir = Math.sign(event.deltaY);
-        if(wheelDir < 0 && wheeling === false){
-            wheeling = true;
+        if(wheelDir < 0 && wheelActive === false){
+            wheelActive = true;
             if(parseInt(currSection)+parseInt(wheelDir) < 1){
                 scrollToSection(sections.length);    
             }
             scrollToSection(parseInt(currSection)+parseInt(wheelDir));
-        }else if(event.deltaY > 0 && wheeling === false){
-            wheeling = true;
+        }else if(event.deltaY > 0 && wheelActive === false){
+            wheelActive = true;
             if(parseInt(currSection)+parseInt(wheelDir) > sections.length){
                 scrollToSection((parseInt(currSection)+parseInt(wheelDir))- sections.length);    
             }
             scrollToSection(parseInt(currSection)+parseInt(wheelDir));
         }
-        this.clearTimeout(wheeling);
-        wheeling = setTimeout(()=>{
-            wheeling = false;
+        this.clearTimeout(wheelActive);
+        wheelActive = setTimeout(()=>{
+            scrollToSection(currSection);
+            wheelActive = false;
         }, 50)
     }); 
 }
