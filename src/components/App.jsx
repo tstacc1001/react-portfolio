@@ -1,4 +1,5 @@
 import '../App.css';
+import '../browser_style_reset.css'
 import React, {useState, useEffect} from 'react';
 import Header from './Header';
 import CarouselNavbar from './CarouselNavbar'

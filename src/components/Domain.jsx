@@ -10,7 +10,6 @@ export default function Domain() {
       <div className='title-wrapper'>
         <h1 className='type-writer'></h1>
       </div>
-
       <p className='closing-tag'></p>
     </div>
   );

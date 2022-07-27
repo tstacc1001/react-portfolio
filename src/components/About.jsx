@@ -1,5 +1,5 @@
 import React from 'react';
-
+import prof from '../prof.jpeg';
 
 export default function About() {
 
@@ -8,8 +8,7 @@ export default function About() {
       <div className='about-wrapper'>
         <div className='about-left'>
           <div className='pic'>
-            <h1>profile</h1>
-            <h1>pic</h1>
+            <img src={prof} alt="profile" />
           </div>
         </div>
         <div className='about-right'>
