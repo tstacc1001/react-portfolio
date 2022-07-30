@@ -11,9 +11,8 @@ export default function Header() {
   return (
       <header className='header-wrapper'>
           <div className='header'>
-            <div className='logo-wrapper' >
-                <p id='sectionLink1'>DAVID<span>Y.</span></p>
-                
+            <div className='logo-wrapper'>
+                <p id='sectionLink1' className='link'>DAVID<span>Y.</span></p>
             </div>
             <div>
                 <ul>

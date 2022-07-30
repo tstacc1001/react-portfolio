@@ -1,28 +1,44 @@
 export default function typeWriter(){
-    let i =0;
-    let txt = "perspiciatis,\nunde omnis\nsit voluptatem"
-    let txt2 = ["perspiciatis,", "unde omnis", "sit voluptatem"]
+    let domainTxt1 = "Hello,\nI'm David"
+    let domainTxt2 = "\nWeb Developer"
     let target = document.querySelector(".type-writer"); 
-    function typeText(){
-        if (i < txt.length) {
-            let text = txt.charAt(i);
-            target.innerHTML += text=== "\n" ? "<br/>": text 
-            i++;
-            setTimeout(typeText, 50);
-        }else{
-            const addSpan = document.createElement("span");
-            target.append(addSpan);
-        }
-    }
-    typeText();
+    let typingArea = document.querySelector(".typer-area");
+    let typingEff = document.createElement("span");
+    typingEff.classList.add("typing");
 
-    function typing(text, delay){
-
+    setTimeout(()=>{
+        typingArea.appendChild(typingEff);
+    }, 500)
+    function typeText(text, speed){
+        // if (i < text.length) {
+        //     let givenText = text.charAt(i);
+        //     target.innerHTML += givenText=== "\n" ? "<br/>": givenText 
+        //     i++;
+        //     setTimeout(typeText(text), 75);
+        // }else{
+            // const addSpan = document.createElement("span");
+            // target.append(addSpan);
+        // }
         for(let i=0;i<text.length;i++){
             setTimeout(()=>{
-                // console.log(text[i]);
-            }, i * 50)
-        }   
+                target.innerHTML += text[i]=== "\n" ? "<br/>": text[i]
+            }, speed * i)
+        }
     }
-    typing(txt);
+    function addTypingEffect(){
+        setTimeout(()=>{
+            const addSpan = document.createElement("span");
+            target.append(addSpan);
+        }, 6700)
+    }
+
+    typer(domainTxt1, 1.5, 70);
+    typer(domainTxt2, 3.5, 70);
+    addTypingEffect();
+    function typer(text, delay, speed){
+        setTimeout(()=>{
+            typeText(text, speed);
+        }, delay * 1000);
+    }
+
 }

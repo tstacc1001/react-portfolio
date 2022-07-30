@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="panel" id='section4'>
       <div className='contact-wrapper'>
-        <h1>CONTACT</h1>
+        <h3 className='subtitle'>CONTACT</h3>
 
       </div>
       <div className='contact-wrapper'>

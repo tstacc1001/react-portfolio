@@ -1,11 +1,12 @@
-import React from 'react';
-
+import React, {useEffect}from 'react';
+import Projects from './Project';
 
 export default function Work() {
-
+  useEffect(()=>{
+  }, [])
   return (
-    <div className="panel" id='section3'>
-        <h1>WORK</h1>
+    <div>
+        <Projects />
     </div>
   );
 }
